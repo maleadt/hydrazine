@@ -10,6 +10,7 @@
 
 #include <hydrazine/interface/Test.h>
 #include <ctime>
+#include <iostream>
 #include <hydrazine/interface/string.h>
 
 #ifdef HAVE_MPICXX
