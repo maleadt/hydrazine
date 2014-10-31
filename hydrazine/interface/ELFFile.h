@@ -143,15 +143,15 @@ public:
 
 public:
 	/*! \brief Get a string representation of a program type */
-	static std::string programTypeToString(int type);
+	static std::string programTypeToString(long type);
 	/*! \brief Get a string representation of a section type */
-	static std::string sectionTypeToString(int type);
+	static std::string sectionTypeToString(long type);
 	/*! \brief Does this section type have a link? */
-	static bool sectionTypeHasLink(int type);
+	static bool sectionTypeHasLink(long type);
 	/*! \brief Get a string representation of a section linkage */
-	static std::string sectionLinkToString(int type);
+	static std::string sectionLinkToString(long type);
 	/*! \brief Get a string representation of a symbol type */
-	static std::string symbolTypeToString(int type);
+	static std::string symbolTypeToString(long type);
 
 private:
 	/*! \brief A vector of section headers */

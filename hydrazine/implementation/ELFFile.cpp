@@ -211,7 +211,7 @@ void ELFFile::write(std::ostream& out)
 	
 	for(unsigned int s = 0; s < sections(); ++s)
 	{
-		int type = sectionHeader(s).header().sh_type;
+		long type = sectionHeader(s).header().sh_type;
 		out << "Section " << s << " Header:\n";
 		out << " name: '"
 			<< getSectionHeaderStringAtOffset(sectionHeader(s).header().sh_name)
@@ -263,7 +263,7 @@ void ELFFile::write(std::ostream& out)
 	}
 }
 
-std::string ELFFile::programTypeToString(int type)
+std::string ELFFile::programTypeToString(long type)
 {
 	switch(type)
 	{
@@ -284,7 +284,7 @@ std::string ELFFile::programTypeToString(int type)
 	return "";
 }
 
-std::string ELFFile::sectionTypeToString(int type)
+std::string ELFFile::sectionTypeToString(long type)
 {
 	switch(type)
 	{
@@ -317,7 +317,7 @@ std::string ELFFile::sectionTypeToString(int type)
 	return "";
 }
 
-std::string ELFFile::sectionLinkToString(int type)
+std::string ELFFile::sectionLinkToString(long type)
 {
 	switch(type)
 	{
@@ -333,7 +333,7 @@ std::string ELFFile::sectionLinkToString(int type)
 	return "undefined";
 }
 
-bool ELFFile::sectionTypeHasLink(int type)
+bool ELFFile::sectionTypeHasLink(long type)
 {
 	return type == elf::SHT_DYNAMIC
 			|| type == elf::SHT_HASH
@@ -343,7 +343,7 @@ bool ELFFile::sectionTypeHasLink(int type)
 			|| type == elf::SHT_DYNSYM;
 }
 
-std::string ELFFile::symbolTypeToString(int type)
+std::string ELFFile::symbolTypeToString(long type)
 {
 	switch(type)
 	{

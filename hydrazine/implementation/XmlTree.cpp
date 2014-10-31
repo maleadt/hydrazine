@@ -11,7 +11,7 @@
 */
 
 #ifndef XML_TREE_CPP_INCLUDED
-#define XML_TREE_CPP_INLCLUDED
+#define XML_TREE_CPP_INCLUDED
 
 #include <hydrazine/interface/XmlTree.h>
 #include <cassert>
